@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     ### Create fingerprint object
     print("Creating fingerprint object")
-    fp = MAPFingerprint(n_jobs=-1)
+    fp = MAPFingerprint(n_jobs=-1,sparse=True)
 
     ### Run computation
     print("Computing with joblib backend")
@@ -40,6 +40,8 @@ if __name__ == "__main__":
     fps_joblib = fp.transform(pcba_molecules)
     end = time()
     print(f"computation time {end-start:.5} s")
+
+    del fps_joblib
 
     # Processing molecules with Dask
     print("Compute map fingerprint with dask")
@@ -59,13 +61,15 @@ if __name__ == "__main__":
     ### Run computation
     with joblib.parallel_config("dask"):
         print("Creating fingerprint object")
-        fp = MAPFingerprint(n_jobs=-1)
+        fp = MAPFingerprint(n_jobs=-1,sparse=True)
 
         print("Computing with joblib backend")
         start = time()
         fps_dask = fp.transform(pcba_molecules)
         end = time()
         print(f"computation time {end - start:.5} s")
+
+        del fps_dask
 
     # Closing client and cluster
     print("Closing Dask client")
