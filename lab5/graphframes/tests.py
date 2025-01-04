@@ -15,10 +15,10 @@
 # limitations under the License.
 #
 
+import re
+import shutil
 import sys
 import tempfile
-import shutil
-import re
 
 if sys.version_info[:2] <= (2, 6):
     try:
@@ -30,11 +30,12 @@ else:
     import unittest
 
 from pyspark import SparkContext
-from pyspark.sql import functions as sqlfunctions, SparkSession
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as sqlfunctions
 
-from .graphframe import GraphFrame, Pregel, _java_api, _from_java_gf
+from .examples import BeliefPropagation, Graphs
+from .graphframe import GraphFrame, Pregel, _from_java_gf, _java_api
 from .lib import AggregateMessages as AM
-from .examples import Graphs, BeliefPropagation
 
 
 class GraphFrameTestUtils(object):

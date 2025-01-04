@@ -20,9 +20,9 @@ import sys
 if sys.version > "3":
     basestring = str
 
+from pyspark.ml.wrapper import JavaWrapper
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql.functions import col
-from pyspark.ml.wrapper import JavaWrapper
 
 
 class Pregel(JavaWrapper):

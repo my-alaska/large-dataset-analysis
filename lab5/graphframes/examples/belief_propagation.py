@@ -22,7 +22,9 @@ import math
 import graphframes.examples
 from graphframes import GraphFrame
 from graphframes.lib import AggregateMessages as AM
-from pyspark.sql import SparkSession, functions as sqlfunctions, types
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as sqlfunctions
+from pyspark.sql import types
 
 __all__ = ["BeliefPropagation"]
 

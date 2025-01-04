@@ -16,7 +16,8 @@
 #
 
 from pyspark import SparkContext
-from pyspark.sql import DataFrame, functions as sqlfunctions, SparkSession
+from pyspark.sql import DataFrame, SparkSession
+from pyspark.sql import functions as sqlfunctions
 
 
 def _java_api(jsc):

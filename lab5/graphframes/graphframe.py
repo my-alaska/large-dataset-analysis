@@ -20,11 +20,10 @@ import sys
 if sys.version > "3":
     basestring = str
 
+from graphframes.lib import Pregel
 from pyspark import SparkContext
 from pyspark.sql import Column, DataFrame, SparkSession
 from pyspark.storagelevel import StorageLevel
-
-from graphframes.lib import Pregel
 
 
 def _from_java_gf(jgf, spark):
@@ -480,6 +479,7 @@ class GraphFrame(object):
 
 def _test():
     import doctest
+
     import graphframe
 
     globs = graphframe.__dict__.copy()
