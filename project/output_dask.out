@@ -1,0 +1,9 @@
+initialized dask mpi
+Loading molecules
+Compute map fingerprint with dask
+Creating Dask client
+Dask client n_threads: 94
+Creating fingerprint object
+Computing with dask backend
+computation time 17.094 s
+Closing Dask client

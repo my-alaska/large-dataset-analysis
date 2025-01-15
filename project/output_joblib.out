@@ -1,0 +1,7 @@
+Loading molecules
+Compute map fingerprint with joblib
+Joblib effective n_jobs: 48
+Used n_jobs: 48
+Creating fingerprint object
+Computing with joblib backend
+computation time 32.828 s

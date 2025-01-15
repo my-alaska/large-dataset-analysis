@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=molecular_fingerprints_pcba_joblib
+#SBATCH --job-name=molecular_fingerprints_pcba
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -8,8 +8,8 @@
 #SBATCH -A plgfastdnns-cpu
 #SBATCH -p plgrid
 #SBATCH --mem=64GB
-#SBATCH --output="results/output_joblib.out"
-#SBATCH --error="results/error_joblib.err"
+#SBATCH --output="~/fingerprints/pcba_dask/output_joblib.out"
+#SBATCH --error="~/fingerprints/pcba_dask/error_joblib.err"
 
 cd $SLURM_SUBMIT_DIR
 
